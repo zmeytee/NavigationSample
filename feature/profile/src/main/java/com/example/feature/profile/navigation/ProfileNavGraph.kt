@@ -4,6 +4,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.example.core.ui.utils.navigateSingleTop
 import com.example.feature.profile.ProfileScreen
 import com.example.feature.profile.ProfileScreen2
 import com.example.feature.profile.ProfileScreen3
@@ -15,15 +16,11 @@ private const val profile2Route = "profile2"
 private const val profile3Route = "profile3"
 
 private fun NavController.navigateToProfile2() {
-    navigate(profile2Route) {
-        launchSingleTop = true
-    }
+    navigateSingleTop(profile2Route)
 }
 
 private fun NavController.navigateToProfile3() {
-    navigate(profile3Route) {
-        launchSingleTop = true
-    }
+    navigateSingleTop(profile3Route)
 }
 
 fun NavGraphBuilder.profileNavGraph(navController: NavController) {

@@ -4,6 +4,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.example.core.ui.utils.navigateSingleTop
 import com.example.feature.home.HomeScreen
 import com.example.feature.home.HomeScreen2
 import com.example.feature.home.HomeScreen3
@@ -15,15 +16,11 @@ private const val home2Route = "home2"
 private const val home3Route = "home3"
 
 private fun NavController.navigateToHome2() {
-    navigate(home2Route) {
-        launchSingleTop = true
-    }
+    navigateSingleTop(home2Route)
 }
 
 private fun NavController.navigateToHome3() {
-    navigate(home3Route) {
-        launchSingleTop = true
-    }
+    navigateSingleTop(home3Route)
 }
 
 fun NavGraphBuilder.homeNavGraph(navController: NavController) {

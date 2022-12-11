@@ -20,7 +20,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.navigationsample.navigation.BottomBarDestination
-import com.example.navigationsample.ui.MyAppNavHost
+import com.example.navigationsample.navigation.MyAppNavHost
 import com.example.navigationsample.ui.theme.NavigationSampleTheme
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)

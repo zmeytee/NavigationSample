@@ -4,6 +4,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.example.core.ui.utils.navigateSingleTop
 import com.example.settings.SettingsScreen
 import com.example.settings.SettingsScreen2
 import com.example.settings.SettingsScreen3
@@ -15,15 +16,11 @@ private const val settings2Route = "settings2"
 private const val settings3Route = "settings3"
 
 private fun NavController.navigateToSettings2() {
-    navigate(settings2Route) {
-        launchSingleTop = true
-    }
+    navigateSingleTop(settings2Route)
 }
 
 private fun NavController.navigateToSettings3() {
-    navigate(settings3Route) {
-        launchSingleTop = true
-    }
+    navigateSingleTop(settings3Route)
 }
 
 fun NavGraphBuilder.settingsNavGraph(navController: NavController) {
