@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun SettingsScreen3(
+internal fun SettingsScreen3(
     navigateBack: () -> Unit,
 ) {
     Column {

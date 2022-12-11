@@ -12,7 +12,7 @@ import com.example.core.ui.MyButton
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun SettingsScreen(
+internal fun SettingsScreen(
     navigateToSettings2: () -> Unit,
     navigateToSettings3: () -> Unit,
 ) {

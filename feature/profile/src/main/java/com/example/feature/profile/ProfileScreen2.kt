@@ -10,7 +10,7 @@ import com.example.core.ui.MyButton
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun ProfileScreen2(
+internal fun ProfileScreen2(
     navigateToProfile3: () -> Unit,
     navigateBack: () -> Unit,
 ) {

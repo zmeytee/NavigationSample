@@ -5,7 +5,7 @@ import androidx.compose.runtime.Composable
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun HomeScreen3(
+internal fun HomeScreen3(
     navigateBack: () -> Unit,
 ) {
     Column {

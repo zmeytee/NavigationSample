@@ -8,21 +8,27 @@ import com.example.feature.profile.ProfileScreen
 import com.example.feature.profile.ProfileScreen2
 import com.example.feature.profile.ProfileScreen3
 
+private const val profileNavGraphRoute = "profile_nav_graph"
+
+private const val profileRoute = "profile"
+private const val profile2Route = "profile2"
+private const val profile3Route = "profile3"
+
 private fun NavController.navigateToProfile2() {
-    navigate("profile2") {
+    navigate(profile2Route) {
         launchSingleTop = true
     }
 }
 
 private fun NavController.navigateToProfile3() {
-    navigate("profile3") {
+    navigate(profile3Route) {
         launchSingleTop = true
     }
 }
 
 fun NavGraphBuilder.profileNavGraph(navController: NavController) {
-    navigation(startDestination = "profile", route = "profile_graph") {
-        composable("profile") {
+    navigation(startDestination = profileRoute, route = profileNavGraphRoute) {
+        composable(profileRoute) {
             ProfileScreen(
                 navigateToProfile2 = {
                     navController.navigateToProfile2()
@@ -32,7 +38,7 @@ fun NavGraphBuilder.profileNavGraph(navController: NavController) {
                 },
             )
         }
-        composable("profile2") {
+        composable(profile2Route) {
             ProfileScreen2(
                 navigateToProfile3 = {
                     navController.navigateToProfile3()
@@ -42,7 +48,7 @@ fun NavGraphBuilder.profileNavGraph(navController: NavController) {
                 },
             )
         }
-        composable("profile3") {
+        composable(profile3Route) {
             ProfileScreen3(
                 navigateBack = {
                     navController.popBackStack()

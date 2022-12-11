@@ -12,7 +12,7 @@ import com.example.core.ui.MyButton
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun ProfileScreen(
+internal fun ProfileScreen(
     navigateToProfile2: () -> Unit,
     navigateToProfile3: () -> Unit,
 ) {

@@ -10,7 +10,7 @@ import com.example.core.ui.MyButton
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun HomeScreen2(
+internal fun HomeScreen2(
     navigateToHome3: () -> Unit,
     navigateBack: () -> Unit,
 ) {
