@@ -8,7 +8,7 @@ import com.example.feature.profile.ProfileScreen
 import com.example.feature.profile.ProfileScreen2
 import com.example.feature.profile.ProfileScreen3
 
-private const val profileNavGraphRoute = "profile_nav_graph"
+const val profileNavGraphRoute = "profile_nav_graph"
 
 private const val profileRoute = "profile"
 private const val profile2Route = "profile2"

@@ -8,7 +8,7 @@ import com.example.settings.SettingsScreen
 import com.example.settings.SettingsScreen2
 import com.example.settings.SettingsScreen3
 
-private const val settingsNavGraphRoute = "settings_nav_graph"
+const val settingsNavGraphRoute = "settings_nav_graph"
 
 private const val settingsRoute = "settings"
 private const val settings2Route = "settings2"

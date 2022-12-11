@@ -5,6 +5,9 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.example.feature.home.navigation.homeNavGraphRoute
+import com.example.feature.profile.navigation.profileNavGraphRoute
+import com.example.settings.navigation.settingsNavGraphRoute
 
 sealed class BottomBarDestination(
     val graphRoute: String,
@@ -12,19 +15,19 @@ sealed class BottomBarDestination(
     val icon: ImageVector
 ) {
     object Home : BottomBarDestination(
-        graphRoute = "home_graph",
+        graphRoute = homeNavGraphRoute,
         label = "Home",
         icon = Icons.Filled.Home
     )
 
     object Profile : BottomBarDestination(
-        graphRoute = "profile_graph",
+        graphRoute = profileNavGraphRoute,
         label = "Profile",
         icon = Icons.Filled.Person
     )
 
     object Settings : BottomBarDestination(
-        graphRoute = "settings_graph",
+        graphRoute = settingsNavGraphRoute,
         label = "Settings",
         icon = Icons.Filled.Settings
     )
