@@ -17,9 +17,9 @@ import androidx.compose.runtime.Composable
 @Composable
 fun MyTopAppBar(
     title: String,
-    onNavigateBack: (() -> Unit)? = null,
+    onClickBack: (() -> Unit)? = null,
 ) {
-    if (onNavigateBack == null) {
+    if (onClickBack == null) {
         TopAppBar(
             title = { Text(text = title) },
             colors = TopAppBarDefaults.topAppBarColors(
@@ -31,7 +31,7 @@ fun MyTopAppBar(
         TopAppBar(
             title = { Text(text = title) },
             navigationIcon = {
-                IconButton(onClick = onNavigateBack) {
+                IconButton(onClick = onClickBack) {
                     Icon(
                         imageVector = Icons.Filled.ArrowBack,
                         contentDescription = null

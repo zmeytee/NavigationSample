@@ -2,12 +2,13 @@ package com.example.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun SettingsScreen3(navController: NavController) {
+fun SettingsScreen3(
+    navigateBack: () -> Unit,
+) {
     Column {
-        MyTopAppBar(title = "Settings #3", onNavigateBack = { navController.popBackStack() })
+        MyTopAppBar(title = "Settings #3", onClickBack = navigateBack)
     }
 }

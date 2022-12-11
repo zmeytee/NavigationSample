@@ -8,12 +8,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
 import com.example.core.ui.MyButton
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun SettingsScreen(navController: NavController) {
+fun SettingsScreen(
+    navigateToSettings2: () -> Unit,
+    navigateToSettings3: () -> Unit,
+) {
     Column {
         MyTopAppBar(title = "Settings")
 
@@ -24,20 +26,12 @@ fun SettingsScreen(navController: NavController) {
             Column(modifier = Modifier.verticalScroll(state = rememberScrollState())) {
                 MyButton(
                     text = "To Settings #2",
-                    onClick = {
-                        navController.navigate("settings2") {
-                            launchSingleTop = true
-                        }
-                    }
+                    onClick = navigateToSettings2,
                 )
 
                 MyButton(
                     text = "To Settings #3",
-                    onClick = {
-                        navController.navigate("settings3") {
-                            launchSingleTop = true
-                        }
-                    }
+                    onClick = navigateToSettings3,
                 )
             }
         }

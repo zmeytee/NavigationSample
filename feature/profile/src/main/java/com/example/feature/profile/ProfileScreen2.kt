@@ -6,14 +6,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
 import com.example.core.ui.MyButton
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun ProfileScreen2(navController: NavController) {
+fun ProfileScreen2(
+    navigateToProfile3: () -> Unit,
+    navigateBack: () -> Unit,
+) {
     Column {
-        MyTopAppBar(title = "Profile #2", onNavigateBack = { navController.popBackStack() })
+        MyTopAppBar(title = "Profile #2", onClickBack = navigateBack)
 
         Box(
             modifier = Modifier.fillMaxSize(),
@@ -21,11 +23,7 @@ fun ProfileScreen2(navController: NavController) {
         ) {
             MyButton(
                 text = "To Profile #3",
-                onClick = {
-                    navController.navigate("profile3") {
-                        launchSingleTop = true
-                    }
-                }
+                onClick = navigateToProfile3,
             )
         }
     }

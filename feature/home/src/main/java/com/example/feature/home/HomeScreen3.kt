@@ -2,12 +2,13 @@ package com.example.feature.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
 import com.example.core.ui.MyTopAppBar
 
 @Composable
-fun HomeScreen3(navController: NavController) {
+fun HomeScreen3(
+    navigateBack: () -> Unit,
+) {
     Column {
-        MyTopAppBar(title = "Home #3", onNavigateBack = { navController.popBackStack() })
+        MyTopAppBar(title = "Home #3", onClickBack = navigateBack)
     }
 }
